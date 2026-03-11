@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historia del Carnaval de Cádiz</title>
 
 	<style>
@@ -23,7 +24,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: #D35400; /* color liso */
+            background-color: #D35400; 
             color: white;
             display: flex;
             justify-content: space-between;
@@ -142,13 +143,88 @@
 
         footer form button:hover {
             background-color: #BA4A00;
-        }				
+        }
+		
+		/* MOVIL */
+
+		@media (max-width: 768px) {
+
+		header {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 10px;
+		}
+
+		.logo-container img {
+			height: **35px**;
+		}
+
+		.logo-container h1 {
+			font-size: **16px**;
+		}
+
+		nav {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 10px;
+			margin-top: 10px;
+			width: 100%;
+		}
+
+		nav a {
+			font-size: **16px**;
+		}
+
+		.btn-live {
+			width: 100%;
+			margin-left: 0;
+		}
+
+		main {
+			margin-top: **160px**;
+			padding: 15px;
+		}
+
+		main h2 {
+			font-size: **22px**;
+		}
+
+		main p {
+			font-size: **16px**;
+			line-height: **1.6**;
+		}
+
+		main img {
+			width: **100%**;
+			max-width: 100%;
+			margin: 20px 0;
+		}
+
+		footer {
+			position: static;
+			flex-direction: column;
+			text-align: center;
+			gap: 15px;
+			padding: **25px 15px**;
+		}
+
+		footer .column {
+			width: 100%;
+		}
+
+		footer form input,
+		footer form textarea {
+			font-size: 14px;
+		}
+	}
 			
 	
 	</style>
 
 </head>
 <body>
+
+	<!-- Header -->
     <header>
         <div class="logo-container">
             <img src="logo-carnaval.png" alt="Logo Carnaval">
@@ -163,6 +239,7 @@
         </nav>
     </header>
 
+	<!-- Contenido principal -->
     <main>
         <p>El Carnaval de Cádiz es una de las fiestas más antiguas y famosas de España. 
 		Sus orígenes se remontan a los siglos XV y XVI, cuando Cádiz era un puerto comercial muy importante y tenía un contacto continuo con otras culturas, especialmente con Italia.
@@ -178,5 +255,32 @@
 		<p>A diferencia de otros carnavales más basados en desfiles, el de Cádiz se centró sobre todo en <b>el humor, la música y la sátira<b>.</p>
 		<img src="https://s3.abcstatics.com/abc/sevilla/media/cultura/2021/03/24/s/tio-tiza-claveles-kOzE--1248x698@abc.jpg" alt="Carnaval de Cádiz">
 	</main>
+	
+	<!-- Footer fijo con 3 columnas -->
+    <footer>
+        <div class="column">
+            <img src="logo-carnaval.png" alt="Logo" style="height:40px;">
+            <p>Web dedicada al Carnaval de Cádiz, sus tradiciones y eventos más importantes.</p>
+        </div>
+
+        <div class="column">
+            <h3>Enlaces</h3>
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Historia</a>
+            <a href="agrupaciones.html">Agrupaciones</a>
+            <a href="concurso/concurso.html">Concurso</a>
+        </div>
+
+        <div class="column">
+            <h3>Contacto</h3>
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo" required>
+                <textarea placeholder="Mensaje" rows="3" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </footer>
+	
 </body>
 </html>

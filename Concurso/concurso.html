@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concurso COAC</title>
 	
 	<style>
@@ -142,12 +143,100 @@
 
         footer form button:hover {
             background-color: #BA4A00;
-        }	
+        }
+
+		/* MOVIL */
+		
+		@media (max-width: 768px) {
+
+		header {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			padding: 6px 10px;   
+		}
+
+		.logo-container {
+			flex-direction: column;
+			align-items: center;
+			gap: 5px;
+		}
+
+		.logo-container img {
+			height: 30px;   
+		}
+
+		.logo-container h1 {
+			font-size: 16px;
+		}
+
+		nav {
+			flex-direction: column;
+			align-items: center;
+			gap: 8px;
+			margin-top: 5px;
+			width: 100%;
+		}
+
+		nav a {
+			font-size: 15px;
+		}
+
+		.btn-live {
+			width: 100%;
+			margin-left: 0;
+			padding: 6px 10px;
+		}
+
+		main {
+			margin-top: 130px;   
+			padding: 15px;
+		}
+
+		main p {
+			font-size: 16px;
+			line-height: 1.6;
+		}
+
+		main h3 {
+			font-size: 20px;
+			margin-top: 15px;
+		}
+
+		/* separar puntos de listas */
+		ul li, ol li {
+			margin-bottom: 10px;
+		}
+
+		main img {
+			width: 100%;
+			height: auto;
+			margin: 20px 0;
+		}
+
+		footer {
+			position: static;
+			flex-direction: column;
+			text-align: center;
+			gap: 15px;
+			padding: 25px 15px;
+		}
+
+		footer .column {
+			width: 100%;
+		}
+
+		footer form input,
+		footer form textarea {
+			font-size: 14px;
+		}
+	}
 	
 	</style>
 	
 </head>
 <body>
+
    <header>
         <div class="logo-container">
             <img src="logo-carnaval.png" alt="Logo Carnaval">
@@ -161,7 +250,9 @@
             <button class="btn-live" onclick="window.open('https://www.youtube.com/', '_blank')">Ver en directo</button>
         </nav>
 	</header>
-
+	
+	
+	<!-- Contenido principal -->
     <main>
         <p>El <b>COAC</b> es el concurso más importante del Carnaval de Cádiz.  
 		Se celebra cada año en el <b>Gran Teatro Falla</b> y reúne a las mejores agrupaciones de la ciudad, desde chirigotas hasta coros, comparsas y cuartetos.</p>
@@ -192,5 +283,32 @@
 		<img src="C:\Users\crist\OneDrive\Escritorio\CFGS INFORMÁTICA (DAW)\LMS\HTML\CarnavaldeCadiz\Concurso\imagen1.jpg" alt="Imagen del concurso">
 		
     </main>
+	
+	<!-- Footer fijo con 3 columnas -->
+    <footer>
+        <div class="column">
+            <img src="logo-carnaval.png" alt="Logo" style="height:40px;">
+            <p>Web dedicada al Carnaval de Cádiz, sus tradiciones y eventos más importantes.</p>
+        </div>
+
+        <div class="column">
+            <h3>Enlaces</h3>
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Historia</a>
+            <a href="agrupaciones.html">Agrupaciones</a>
+            <a href="concurso/concurso.html">Concurso</a>
+        </div>
+
+        <div class="column">
+            <h3>Contacto</h3>
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo" required>
+                <textarea placeholder="Mensaje" rows="3" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </footer>
+	
 </body>
 </html>

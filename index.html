@@ -23,7 +23,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: #D35400; /* color liso */
+            background-color: #D35400; 
             color: white;
             display: flex;
             justify-content: space-between;
@@ -144,65 +144,66 @@
             background-color: #BA4A00;
         }
 		
-		/* ESTILOS PARA MÓVILES */
-@media (max-width: 768px) {
+		/* MOVIL */
 
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
+		@media (max-width: 768px) {
 
-    .logo-container h1 {
-        font-size: 16px;
-    }
+			header {
+				flex-direction: column;
+				align-items: flex-start;
+				padding: 10px;
+			}
 
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        margin-top: 10px;
-        width: 100%;
-    }
+			.logo-container h1 {
+				font-size: 16px;
+			}
 
-    nav a {
-        font-size: 14px;
-    }
+			nav {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 10px;
+				margin-top: 10px;
+				width: 100%;
+			}
 
-    .btn-live {
-        width: 100%;
-        margin-left: 0;
-    }
+			nav a {
+				font-size: 14px;
+			}
 
-    main {
-        margin-top: 120px;
-        padding: 15px;
-    }
+			.btn-live {
+				width: 100%;
+				margin-left: 0;
+			}
 
-    main h2 {
-        font-size: 20px;
-    }
+			main {
+				margin-top: 120px;
+				padding: 15px;
+			}
 
-    main p {
-        font-size: 14px;
-    }
+			main h2 {
+				font-size: 20px;
+			}
 
-    footer {
-        position: static;
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
+			main p {
+				font-size: 14px;
+			}
 
-    footer .column {
-        width: 100%;
-    }
+			footer {
+				position: static;
+				flex-direction: column;
+				text-align: center;
+				gap: 15px;
+			}
 
-    footer form input,
-    footer form textarea {
-        font-size: 14px;
-    }
-}
+			footer .column {
+				width: 100%;
+			}
+
+				footer form input,
+				footer form textarea {
+					font-size: 14px;
+				}
+	}
 
     </style>
 </head>

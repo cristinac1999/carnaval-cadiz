@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agrupaciones del Carnaval</title>
 	
 	<style>
@@ -23,7 +24,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: #D35400; /* color liso */
+            background-color: #D35400; 
             color: white;
             display: flex;
             justify-content: space-between;
@@ -142,7 +143,93 @@
 
         footer form button:hover {
             background-color: #BA4A00;
-        }	
+        }
+
+		/* MOVIL */
+
+		@media (max-width: 768px) {
+
+			header {
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				padding: 10px;
+			}
+
+			.logo-container {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.logo-container img {
+				height: 35px;
+			}
+
+			.logo-container h1 {
+				font-size: 16px;
+			}
+
+			nav {
+				flex-direction: column;
+				align-items: center;
+				gap: 10px;
+				margin-top: 10px;
+				width: 100%;
+			}
+
+			nav a {
+				font-size: 16px;
+			}
+
+			.btn-live {
+				width: 100%;
+				margin-left: 0;
+			}
+
+			main {
+				margin-top: 160px;
+				padding: 15px;
+			}
+
+			main h2 {
+				font-size: 22px;
+			}
+
+			main p {
+				font-size: 16px;
+				line-height: 1.6;
+			}
+
+			main img {
+				width: 100%;
+				max-width: 100%;
+				margin: 20px 0;
+			}
+
+			/* vídeos responsive */
+			iframe {
+				width: 100%;
+				height: auto;
+				max-width: 100%;
+			}
+
+			footer {
+				position: static;
+				flex-direction: column;
+				text-align: center;
+				gap: 15px;
+				padding: 25px 15px;
+			}
+
+			footer .column {
+				width: 100%;
+			}
+
+			footer form input,
+			footer form textarea {
+				font-size: 14px;
+			}
+		}
 	
 	</style>
 	
@@ -162,6 +249,7 @@
         </nav>
     </header>
 
+	<!-- Contenido principal -->
     <main>
         <h2>Qué son</h2>
         <p> Las agrupaciones son grupos de personas que cantan coplas carnavalescas, normalmente con letras humorísticas o críticas, y que actúan tanto en el teatro como en la calle.
@@ -180,5 +268,32 @@
 			<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/w_Q9X8G_Sns?si=dAVsXjWQ7dk9mite" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </ul>
     </main>
+	
+	<!-- Footer fijo con 3 columnas -->
+    <footer>
+        <div class="column">
+            <img src="logo-carnaval.png" alt="Logo" style="height:40px;">
+            <p>Web dedicada al Carnaval de Cádiz, sus tradiciones y eventos más importantes.</p>
+        </div>
+
+        <div class="column">
+            <h3>Enlaces</h3>
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Historia</a>
+            <a href="agrupaciones.html">Agrupaciones</a>
+            <a href="concurso/concurso.html">Concurso</a>
+        </div>
+
+        <div class="column">
+            <h3>Contacto</h3>
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo" required>
+                <textarea placeholder="Mensaje" rows="3" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </footer>
+	
 </body>
 </html>
